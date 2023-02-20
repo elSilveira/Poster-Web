@@ -1,0 +1,29 @@
+<div class="dashboard">
+  <div class="dashboard--top">
+    <div class="actions">
+      <div class="button status"
+           (click)="checkStatus()"
+           [class.logged]="status">
+        <label>Status: {{status ? 'ACTIVE' : 'LOGIN'}}</label>
+      </div>
+      <div class="button novo"
+           (click)="showInsert = !showInsert">
+        <label>NOVO POST</label>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard--content">
+    <div class="to-post">
+      <div class="title">
+        <h1>Próximas Postagens</h1>
+      </div>
+      <app-list [items]="itemsList"></app-list>
+    </div>
+    <div class="posted">
+      <div class="title">
+        <h1>Histórico</h1>
+      </div>
+      <app-list [items]="postedList"></app-list>
+    </div>
+  </div>
+</div>

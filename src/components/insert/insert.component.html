@@ -1,0 +1,56 @@
+<div class="insert">
+  <div class="container">
+    <div class="input">
+      <div class="main">
+        <input type="text"
+               [(ngModel)]="mainfolder"
+               (change)="changeFolder($event)">
+      </div>
+      <div class="file">
+        <div class="single-file">
+          <label>Arquivo: </label>
+          <input type="file"
+                 (change)="onuploadfile($event)">
+        </div>
+        <div class="single-file">
+          <label>Thumb:</label>
+          <input type="file"
+                 (change)="onuploadthumb($event)">
+        </div>
+      </div>
+      <div class="title">
+        <label>Titulo: </label>
+        <input type="text"
+               [(ngModel)]="titulo">
+        <label>Descricao: </label>
+        <textarea [(ngModel)]="descricao"></textarea>
+      </div>
+      <div class="socials">
+        <div class="socials--item facebook"
+             (click)="facebookSelected = !facebookSelected"
+             [class.not-selected]="!facebookSelected">
+          F
+        </div>
+        <div class="socials--item instagram"
+             (click)="instagramSelected = !instagramSelected"
+             [class.not-selected]="!instagramSelected">
+          I
+        </div>
+        <div class="socials--item youtube"
+             (click)="youtubeSelected = !youtubeSelected"
+             [class.not-selected]="!youtubeSelected">
+          Y
+        </div>
+        <div class="socials--item tiktok"
+             (click)="tiktokSelected = !tiktokSelected"
+             [class.not-selected]="!tiktokSelected">
+          T
+        </div>
+      </div>
+      <div class="save-button"
+           (click)="save()">
+        SAVE
+      </div>
+    </div>
+  </div>
+</div>

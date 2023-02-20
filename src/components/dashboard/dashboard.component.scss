@@ -1,0 +1,41 @@
+.dashboard {
+  &--content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    .to-post {
+      margin-top: 40px;
+    }
+    .posted {
+      margin-top: 80px;
+    }
+  }
+  .actions {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .status {
+      margin-left: 50px;
+      border: solid 4px #414141;
+      color: #b20606;
+    }
+    .logged {
+      border: solid 4px #14b206;
+      color: #14b206;
+    }
+    .novo {
+      margin-right: 50px;
+      border: solid 1px #000;
+    }
+    .button {
+      padding: 12px 45px;
+      cursor: pointer;
+      border-radius: 10px;
+      label {
+        cursor: pointer;
+      }
+    }
+  }
+}

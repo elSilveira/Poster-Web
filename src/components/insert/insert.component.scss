@@ -1,0 +1,92 @@
+.insert {
+  .main {
+    margin-top: 20px;
+    input {
+      height: 40px;
+      width: 50%;
+      text-align: center;
+      margin: auto;
+      display: flex;
+    }
+  }
+  .content,
+  .file {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    input {
+      height: 40px;
+    }
+  }
+  .single-file {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .file {
+    margin-bottom: 30px;
+  }
+
+  .title {
+    padding: 0 20%;
+    width: calc(100% - 40%);
+    display: flex;
+    flex-direction: column;
+    input {
+      height: 40px;
+      margin-bottom: 20px;
+    }
+    textarea {
+      height: 120px;
+    }
+  }
+  .save-button {
+    width: 300px;
+    height: 40px;
+    background-color: rgb(0, 177, 9);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    align-items: center;
+    border-radius: 10px;
+    color: antiquewhite;
+  }
+  .socials {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+    &--item {
+      border-radius: 20px;
+      padding: 20px 40px;
+      border: solid 1px #4b4b4b39;
+      text-align: center;
+      color: white;
+      cursor: pointer;
+      label {
+        cursor: pointer;
+      }
+    }
+    .facebook {
+      background-color: #1877f2;
+    }
+    .youtube {
+      background-color: #ff0000;
+    }
+    .tiktok {
+      background-color: #19be6b;
+    }
+    .instagram {
+      background-color: #c13584;
+    }
+    .not-selected {
+      background-color: rgba(201, 201, 201, 0.421) !important;
+      color: rgb(88, 88, 88);
+    }
+  }
+}

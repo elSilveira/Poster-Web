@@ -1,0 +1,19 @@
+.list {
+  .row {
+    margin: 8px 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 6;
+    border-bottom: solid 1px #000;
+    label {
+      display: block;
+      padding: 10px;
+      width: 14.5%;
+      max-width: 14.5%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

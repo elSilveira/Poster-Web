@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+$facebook-color: #1877f2;
+$facebook-color-dark: #0e59a0;
+$facebook-color-light: #9bb7d4;
+$facebook-color-muted: #cfd2d8;
+
+$twitter-color: #1da1f2;
+$twitter-color-dark: #0d8ecf;
+$twitter-color-light: #a4d4f3;
+$twitter-color-muted: #8899a6;
+
+$tiktok-color: #69c9d0;
+$tiktok-color-dark: #4e9da6;
+$tiktok-color-light: #c4ebef;
+$tiktok-color-muted: #9cb6bd;
+
+$youtube-color: #ff0000;
+$youtube-color-dark: #cc0000;
+$youtube-color-light: #ff5f5f;
+$youtube-color-muted: #8c8c8c;
+
+html {
+  font-family: "Poppins", sans-serif;
+}
