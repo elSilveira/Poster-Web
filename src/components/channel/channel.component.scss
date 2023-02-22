@@ -1,0 +1,83 @@
+.channel {
+  &--top {
+    display: flex;
+    gap: 40px;
+    align-items: baseline;
+  }
+  &--title {
+    display: flex;
+    gap: 20px;
+    h2 {
+      border: solid 1px;
+      padding: 0 20px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      cursor: pointer;
+      &:hover {
+        border: solid 2px #7d7d7d;
+        color: #7d7d7d;
+      }
+    }
+  }
+  &--input {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 20px;
+    .description {
+      width: 350px;
+    }
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .row {
+        display: flex;
+        gap: 20px;
+        justify-content: right;
+      }
+    }
+    .buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: right;
+    }
+  }
+  &--container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  &--list {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  &--item {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px red;
+    padding: 20px;
+    max-width: fit-content;
+    h3 {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+  }
+  .actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: right;
+    font-size: 20px;
+    div {
+      padding: 5px 15px;
+      cursor: pointer;
+      border: 1px solid;
+      border: solid 1px green;
+    }
+  }
+  .authenticated {
+    border: solid 1px green;
+  }
+}

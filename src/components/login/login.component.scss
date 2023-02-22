@@ -12,20 +12,13 @@
     gap: 20px;
     flex-direction: column;
   }
-}
-.button {
-  padding: 15px;
-  display: flex;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  font-weight: 14px;
-  border-radius: 10px;
-  cursor: pointer;
-  label {
-    cursor: pointer;
+  &--fields{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  
   }
+
 }
 .facebook {
   background-color: $facebook-color;

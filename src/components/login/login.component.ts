@@ -9,24 +9,17 @@ import { SessionService } from 'src/services/session-service';
 })
 export class LoginComponent implements OnInit {
   loginType = loginType;
-
+  user = {
+    email: '',
+    password: ''
+  }
   constructor(private _sessionService: SessionService, private _router: Router) { }
 
   ngOnInit(): void {
   }
 
-  login(type: loginType) {
-    switch (type) {
-      case loginType.facebook:
-        break;
-      case loginType.google:
-        break;
-      case loginType.tiktok:
-        break;
-      case loginType.twitter:
-        break;
-    }
-    this._sessionService.doLogin(type).subscribe(
+  login(type?: loginType) {
+    this._sessionService.doLogin(this.user).subscribe(
       ev => {
         this._router.navigate([''])
       }

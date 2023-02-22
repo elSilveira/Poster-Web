@@ -1,0 +1,45 @@
+<div class="accounts">
+  <div class="accounts--top">
+    <div class="accounts--title">
+      <h1>Minhas Contas</h1>
+      <h2 *ngIf="!showNew"
+          (click)="showNew = true;">+</h2>
+    </div>
+    <div *ngIf="showNew"
+         class="accounts--input">
+      <div class="inputs">
+        <input type="text"
+               [(ngModel)]="account.nome"
+               placeholder="Nome">
+        <input type="text"
+               class="description"
+               [(ngModel)]="account.descricao"
+               placeholder="Descrição">
+      </div>
+      <div class="buttons">
+        <div class="button"
+             (click)="cancelar()">
+          Cancelar
+        </div>
+        <div class="button"
+             (click)="salvar()">
+          Salvar
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accounts--container">
+    <div class="accounts--list">
+      <div *ngFor="let account of accounts"
+           class="accounts--item">
+        <h3>
+          {{account.nome}}
+        </h3>
+        <label>
+          {{account.descricao}}
+        </label>
+        <app-channel [account]="account"></app-channel>
+      </div>
+    </div>
+  </div>
+</div>

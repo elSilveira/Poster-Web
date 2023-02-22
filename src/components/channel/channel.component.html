@@ -1,0 +1,61 @@
+<div class="channel">
+  <div class="channel--container">
+    <div class="channel--top">
+      <div class="channel--title">
+        <h1>Canais:</h1>
+        <h2 *ngIf="!showNew"
+            (click)="showNew = true;">+</h2>
+      </div>
+      <div *ngIf="showNew"
+           class="channel--input">
+        <div class="inputs">
+          <div class="row">
+            <input type="text"
+                   [(ngModel)]="newChannel.nome"
+                   placeholder="Nome">
+            <input type="text"
+                   class="description"
+                   [(ngModel)]="newChannel.descricao"
+                   placeholder="Descrição">
+          </div>
+          <div class="row">
+            <input type="text"
+                   [(ngModel)]="newChannel.chave"
+                   placeholder="Chave">
+            <input type="text"
+                   [(ngModel)]="newChannel.plataforma"
+                   placeholder="Plataforma">
+          </div>
+
+        </div>
+        <div class="buttons">
+          <div class="button"
+               (click)="cancelar()">
+            Cancelar
+          </div>
+          <div class="button"
+               (click)="salvar()">
+            Salvar
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="channel--list">
+      <div class="channel--item" [class.authenticated]="channel.auth_id"
+           *ngFor="let channel of channels">
+        <h3>{{channel.nome}}</h3>
+        <label>
+          {{channel.descricao}}
+        </label>
+        <div class="platform">
+          {{channel.plataforma}}: {{channel.chave}}
+        </div>
+        <div class="actions">
+          <div class="auth" *ngIf="!channel.auth_id" (click)="authenticate(channel)">
+            Authenticate
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,16 @@
 <div class="login">
   <div class="login--container">
-    <div class="login--actions">
+    <div class="login--fields">
+      <input [(ngModel)]="user.email" type="text"
+             placeholder='Email'>
+      <input [(ngModel)]="user.password"  type="password"
+             placeholder="Senha">
+      <div class="button"
+           (click)="login()">
+        LOGIN
+      </div>
+    </div>
+    <!-- <div class="login--actions">
       <div class="button google"
            (click)="login(loginType.google)">
         <label>GOOGLE</label>
@@ -17,6 +27,6 @@
            (click)="login(loginType.twitter)">
         <label>TWITTER</label>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>

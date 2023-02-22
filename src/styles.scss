@@ -23,3 +23,19 @@ $youtube-color-muted: #8c8c8c;
 html {
   font-family: "Poppins", sans-serif;
 }
+input[type="text"] {
+  padding: 15px;
+}
+input[type="password"] {
+  padding: 15px;
+}
+.button {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  border: solid 1px;
+  cursor: pointer;
+  label {
+    cursor: pointer;
+  }
+}
